@@ -1,0 +1,28 @@
+@import "../../variables";
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: $neutralColor1;
+  z-index: 10;
+  ul {
+    display: flex;
+    list-style: none;
+    background: $neutralColor2;
+    padding: calc($normGap1 * 1.2) $normGap2;
+    gap: $normGap1;
+    transform: translateY(-75%);
+    li {
+      font-size: $fontSizeLevel3;
+      cursor: pointer;
+      a {
+        color: unset;
+        text-decoration: none;
+      }
+      &:hover {
+        color: $color1;
+      }
+    }
+  }
+}

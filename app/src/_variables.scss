@@ -1,0 +1,71 @@
+$neutralColor1: #ffffff;
+$neutralColor2: #151515;
+$neutralColor3: #101010;
+$color1: orange;
+$color2: wheat;
+$color3: #282c4d;
+$animationTimeBasic: 300ms;
+$inlineSideDistance: max(1.5rem, 4vw);
+$fontSizeLevel0: clamp(4.4rem, 6.6vw, 6.6rem);
+$fontSizeLevel1: clamp(2rem, 3.5vw, 3.5rem);
+$fontSizeLevel2: clamp(1.3rem, 2vw, 2rem);
+$fontSizeLevel3: clamp(1.1rem, 1.5vw, 1.5rem);
+$borderRadiusLevel1: 10px;
+$transitionTime0: 300ms;
+$transitionTime1: 800ms;
+$logoSize: 4rem;
+$normGap0: 0.5rem;
+$normGap1: 1rem;
+$normGap2: 2rem;
+$normGap3: max(5vw);
+$pagePadding: calc($fontSizeLevel2 + $fontSizeLevel3 + 7rem) $inlineSideDistance $normGap3 $inlineSideDistance;
+$onasLineWidth: 12px;
+$bounce: linear(
+  0 0%,
+  0 2.27%,
+  0.02 4.53%,
+  0.04 6.8%,
+  0.06 9.07%,
+  0.1 11.33%,
+  0.14 13.6%,
+  0.25 18.15%,
+  0.39 22.7%,
+  0.57 27.25%,
+  0.77 31.8%,
+  1 36.35%,
+  0.89 40.9%,
+  0.85 43.18%,
+  0.81 45.45%,
+  0.79 47.72%,
+  0.77 50%,
+  0.75 52.27%,
+  0.75 54.55%,
+  0.75 56.82%,
+  0.77 59.1%,
+  0.79 61.38%,
+  0.81 63.65%,
+  0.85 65.93%,
+  0.89 68.2%,
+  1 72.7%,
+  0.97 74.98%,
+  0.95 77.25%,
+  0.94 79.53%,
+  0.94 81.8%,
+  0.94 84.08%,
+  0.95 86.35%,
+  0.97 88.63%,
+  1 90.9%,
+  0.99 93.18%,
+  0.98 95.45%,
+  0.99 97.73%,
+  1 100%
+);
+
+//Hamburger-menu
+$hamburgerMenuWidth: 30px;
+$hamburgerMenuHeight: 4px;
+$hamburgerMenuGap: 5.5px;
+$hamburgerMenuMargin: 15px;
+$hamburgerMenuAnimationTime: 300ms;
+$hamburgerMenuWholeHeight: ($hamburgerMenuHeight * 3) + ($hamburgerMenuGap * 2);
+$xWidth: calc($hamburgerMenuWholeHeight * 1.41421356237);

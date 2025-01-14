@@ -1,0 +1,234 @@
+@import "../../variables";
+
+.title {
+  font-size: $fontSizeLevel1;
+  margin: 0 0 2rem 0;
+  .titleSubText {
+    font-family: 400;
+    font-size: $fontSizeLevel2;
+  }
+}
+
+#onasMain {
+  background: $neutralColor2;
+  padding: 3rem;
+  height: 100vh;
+  height: 100svh;
+  #innerContainer {
+    position: relative;
+    display: flex;
+    background-color: $neutralColor3;
+    border-radius: $borderRadiusLevel1;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    #title {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      height: 80%;
+      transform: translate(-50%, -50%);
+      font-size: $fontSizeLevel0;
+      filter: drop-shadow(0 0 5px wheat);
+      font-weight: bold;
+      color: $color2;
+    }
+    .sides {
+      position: absolute;
+      display: flex;
+      align-items: end;
+      width: 50%;
+      height: 100%;
+      .boxes {
+        background-color: $neutralColor2;
+        .lines {
+          position: absolute;
+          background-color: $neutralColor3;
+        }
+      }
+    }
+    #leftSide {
+      left: 0;
+      .box1 {
+        animation: loadingAnim 1400ms $bounce;
+        position: relative;
+        width: 42vw;
+        //aspect-ratio: 42/50;
+        height: 22vw;
+        margin-right: $normGap1;
+        border-radius: 0 $borderRadiusLevel1 0 0;
+        transition: $transitionTime0;
+        &:hover {
+          height: 26vw;
+        }
+        .line1 {
+          width: $onasLineWidth;
+          height: 60%;
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            transform: translate(-25%, 50%);
+            border-radius: 100%;
+            width: 200%;
+            aspect-ratio: 1/1;
+            background-color: $neutralColor3;
+          }
+        }
+      }
+      .box2 {
+        display: flex;
+        justify-content: center;
+        animation: loadingAnim 1500ms $bounce;
+        position: relative;
+        width: 58vw;
+        height: 20vw;
+        margin-right: $normGap0;
+        border-radius: $borderRadiusLevel1 $borderRadiusLevel1 0 0;
+        transition: $transitionTime0;
+        &:hover {
+          height: 24vw;
+        }
+        &::before {
+          content: "- Design -";
+          position: relative;
+          transform: translateY(14%);
+          font-family: cursive;
+          color: $neutralColor1;
+          font-size: $fontSizeLevel1;
+          animation: opacityAnim 2600ms linear;
+        }
+        .line2,
+        .line3 {
+          position: absolute;
+          top: 55%;
+          width: 40%;
+          height: $onasLineWidth;
+          &:after {
+            content: "";
+            position: absolute;
+            transform: translate(-50%, -25%);
+            border-radius: 100%;
+            height: 200%;
+            aspect-ratio: 1/1;
+            background-color: $neutralColor3;
+          }
+        }
+        .line2 {
+          left: 0;
+          &:after {
+            right: 0;
+            transform: translate(50%, -25%);
+          }
+        }
+        .line3 {
+          right: 0;
+          &:after {
+            transform: translate(-50%, -25%);
+          }
+        }
+      }
+    }
+    #rightSide {
+      right: 0;
+      .box3 {
+        display: flex;
+        justify-content: center;
+        animation: loadingAnim 1300ms $bounce;
+        position: relative;
+        width: 58vw;
+        height: 26vw;
+        margin-left: $normGap0;
+        border-radius: $borderRadiusLevel1 $borderRadiusLevel1 0 0;
+        transition: $transitionTime0;
+        &:hover {
+          height: 30vw;
+        }
+        &::before {
+          content: "- 145M -";
+          position: relative;
+          transform: translateY(18%);
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          color: $neutralColor1;
+          font-size: $fontSizeLevel1;
+          animation: opacityAnim 2600ms linear;
+        }
+        .line4,
+        .line5 {
+          position: absolute;
+          top: 55%;
+          width: 40%;
+          height: $onasLineWidth;
+          &:after {
+            content: "";
+            position: absolute;
+            transform: translate(-50%, -25%);
+            border-radius: 100%;
+            height: 200%;
+            aspect-ratio: 1/1;
+            background-color: $neutralColor3;
+          }
+        }
+        .line4 {
+          left: 0;
+          &:after {
+            right: 0;
+            transform: translate(50%, -25%);
+          }
+        }
+        .line5 {
+          right: 0;
+          &:after {
+            transform: translate(-50%, -25%);
+          }
+        }
+      }
+      .box4 {
+        animation: loadingAnim 1600ms $bounce;
+        position: relative;
+        width: 42vw;
+        height: 22vw;
+        margin-left: $normGap1;
+        border-radius: $borderRadiusLevel1 0 0 0;
+        transition: $transitionTime0;
+        &:hover {
+          height: 27vw;
+        }
+        .line6 {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: $onasLineWidth;
+          &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            transform: translate(50%, -25%);
+            border-radius: 100%;
+            height: 200%;
+            aspect-ratio: 1/1;
+            background-color: $neutralColor3;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes loadingAnim {
+  from {
+    height: 100%;
+  }
+}
+
+@keyframes opacityAnim {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,125 @@
+.title {
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  margin: 0 0 2rem 0;
+}
+.title .titleSubText {
+  font-family: 400;
+  font-size: clamp(1.3rem, 2vw, 2rem);
+}
+
+#uvodMain {
+  background: #151515;
+  padding: 3rem;
+  height: 100vh;
+  height: 100svh;
+}
+#uvodMain #innerContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+#uvodMain #innerContainer #leftSide {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#uvodMain #innerContainer #leftSide .boxes {
+  border-radius: 10px;
+  background-color: #101010;
+  height: calc(50% - 1rem);
+  width: 100%;
+  padding: 3rem;
+}
+#uvodMain #innerContainer #leftSide .boxes:first-child {
+  animation: loadInAnim 700ms linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.57 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%);
+}
+#uvodMain #innerContainer #leftSide .boxes:last-child {
+  animation: loadInAnim 1000ms linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.57 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%);
+}
+#uvodMain #innerContainer #leftSide .boxes h1 {
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  color: #ffffff;
+}
+#uvodMain #innerContainer #leftSide .boxes h1 span {
+  color: orange;
+}
+#uvodMain #innerContainer #leftSide .boxes div {
+  color: #ffffff;
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  margin-bottom: 1rem;
+}
+#uvodMain #innerContainer #leftSide .boxes div span {
+  color: orange;
+}
+#uvodMain #innerContainer #rightSide {
+  animation: loadInAnim 1500ms linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.57 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%);
+  border-radius: 10px;
+  width: calc(65% - 2rem);
+  height: 100%;
+  background: radial-gradient(circle, #202020 8%, #101010 63%);
+  position: relative;
+}
+#uvodMain #innerContainer #rightSide #outerCard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-105%, -100%);
+  width: 600px;
+  height: 900px;
+  perspective: 2000px;
+  scale: 0.5;
+  animation: changeIframeSize 10000ms ease-in-out infinite;
+  transition: 300ms;
+}
+#uvodMain #innerContainer #rightSide #outerCard:hover {
+  transform: translate(-105%, -100%) scale(1.1);
+}
+#uvodMain #innerContainer #rightSide #outerCard #innerCard {
+  box-shadow: 0 0 20px 10px black;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: #1d1d1d;
+  transform: rotateY(-20deg);
+  animation: rotateIframe 5000ms ease-in-out 250ms infinite;
+}
+
+@keyframes rotateIframe {
+  0% {
+    transform: rotateY(-20deg);
+  }
+  90% {
+    transform: rotateY(-20deg);
+  }
+  100% {
+    transform: rotateY(-380deg);
+  }
+}
+@keyframes changeIframeSize {
+  0% {
+    width: 600px;
+  }
+  48% {
+    width: 600px;
+  }
+  51% {
+    width: 1300px;
+  }
+  98% {
+    width: 1300px;
+  }
+  100% {
+    width: 600px;
+  }
+}
+@keyframes loadInAnim {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}/*# sourceMappingURL=Uvod.css.map */

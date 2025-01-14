@@ -1,0 +1,12 @@
+@import "_variables";
+
+html {
+  background-color: $neutralColor1;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Trip Sans";
+  scroll-behavior: smooth;
+}

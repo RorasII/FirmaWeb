@@ -1,0 +1,20 @@
+#errorPageMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #101010;
+  height: 100svh;
+}
+#errorPageMain #title {
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: bold;
+  color: #ffffff;
+}
+#errorPageMain #buttonBack {
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  color: #ffffff;
+}
+#errorPageMain #buttonBack:hover {
+  opacity: 0.8;
+}/*# sourceMappingURL=ErrorPage.css.map */

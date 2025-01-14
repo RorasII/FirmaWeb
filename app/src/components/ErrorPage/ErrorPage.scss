@@ -1,0 +1,22 @@
+@import "../../variables";
+
+#errorPageMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $neutralColor3;
+  height: 100svh;
+  #title {
+    font-size: $fontSizeLevel1;
+    font-weight: bold;
+    color: $neutralColor1;
+  }
+  #buttonBack {
+    font-size: $fontSizeLevel2;
+    color: $neutralColor1;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
