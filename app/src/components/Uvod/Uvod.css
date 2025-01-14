@@ -76,6 +76,7 @@
 }
 #uvodMain #innerContainer #rightSide #outerCard:hover {
   transform: translate(-105%, -100%) scale(1.1);
+  animation-play-state: paused;
 }
 #uvodMain #innerContainer #rightSide #outerCard #innerCard {
   box-shadow: 0 0 20px 10px black;
@@ -85,6 +86,9 @@
   background-color: #1d1d1d;
   transform: rotateY(-20deg);
   animation: rotateIframe 5000ms ease-in-out 250ms infinite;
+}
+#uvodMain #innerContainer #rightSide #outerCard:hover {
+  animation-play-state: paused;
 }
 
 @keyframes rotateIframe {

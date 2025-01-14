@@ -76,6 +76,7 @@ $containerColor: radial-gradient(circle, #333333 8%, #202020 63%);
         transition: $transitionTime0;
         &:hover {
           transform: translate(-105%, -100%) scale(1.1);
+          animation-play-state: paused;
         }
         #innerCard {
           box-shadow: 0 0 20px 10px black;
@@ -85,6 +86,9 @@ $containerColor: radial-gradient(circle, #333333 8%, #202020 63%);
           background-color: #1d1d1d;
           transform: rotateY(-20deg);
           animation: rotateIframe 5000ms ease-in-out 250ms infinite;
+        }
+        &:hover {
+          animation-play-state: paused;
         }
       }
     }
