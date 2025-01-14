@@ -8,6 +8,7 @@ import "./index.css";
 import Onas from "./components/Onas/Onas.jsx";
 import Uvod from "./components/Uvod/Uvod.jsx";
 import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
+import Kontakty from "./components/Kontakty/Kontakty.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
   {
     path: "/onas",
     element: <Onas />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/Kontakty",
+    element: <Kontakty />,
     errorElement: <ErrorPage />,
   },
   {
