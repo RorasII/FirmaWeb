@@ -8,12 +8,14 @@ function Test() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    /** @type {CanvasRenderingContext2D} */
+
+    const canvas = /** @type {HTMLCanvasElement} */ canvasRef.current;
     const ctx = canvas.getContext("2d");
     let animationFrameId;
 
     const render = (time) => {
-      drawSomething(ctx, time); // Call your draw function
+      drawSomething(canvas, ctx, time); // Call your draw function
       animationFrameId = requestAnimationFrame(render); // Request next frame
     };
 
@@ -26,7 +28,7 @@ function Test() {
 
   return (
     <div>
-      <canvas ref={canvasRef} width={1000} height={600} style={{ border: "1px solid black" }}></canvas>
+      <canvas ref={canvasRef} width={1920} height={800} style={{ border: "1px solid black" }}></canvas>
     </div>
   );
 }
