@@ -30,6 +30,9 @@ function Uvod() {
       console.log(scale);
       document.getElementById("innerCard").style.scale = scale;
     });
+    let scale = window.innerWidth / 1300;
+    console.log(scale);
+    document.getElementById("innerCard").style.scale = scale;
   }, []);
 
   return (
