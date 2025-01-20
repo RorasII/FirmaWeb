@@ -17,11 +17,22 @@ function Uvod() {
     let index = 0;
 
     const interval = setInterval(() => {
-      index = (index + 1) % links.length; // Cyklus přes texty
+      index = (index + 1) % links.length;
       setCurrentLink(links[index]);
     }, 10000);
 
-    return () => clearInterval(interval); // Vyčištění při odmountování
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      let scale = window.innerWidth / 1300;
+      console.log(scale);
+      document.getElementById("innerCard").style.scale = scale;
+    });
+    let scale = window.innerWidth / 1300;
+    console.log(scale);
+    document.getElementById("innerCard").style.scale = scale;
   }, []);
 
   return (
@@ -52,13 +63,13 @@ function Uvod() {
                 Webové <span>aplikace.</span>
               </div>
               <div>
-                Je Prdelník Miloš <span>průdel?</span>
+                Je Prdelník <span>průdel?</span>
               </div>
             </div>
           </div>
           <div id="rightSide">
             <div id="outerCard">
-              <iframe id="innerCard" src={currentLink} frameborder="0"></iframe>
+              <iframe id="innerCard" src={currentLink} frameBorder={"0"}></iframe>
             </div>
           </div>
         </div>

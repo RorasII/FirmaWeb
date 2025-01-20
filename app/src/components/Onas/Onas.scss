@@ -221,6 +221,12 @@
   }
 }
 
+@keyframes loadingAnim2 {
+  from {
+    height: 50%;
+  }
+}
+
 @keyframes opacityAnim {
   0% {
     opacity: 0;
@@ -230,5 +236,64 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  #onasMain {
+    #innerContainer {
+      #title {
+        top: 48%;
+        height: unset;
+        width: 100vw;
+      }
+      #leftSide {
+        align-items: start;
+        width: 100%;
+        .boxes {
+          width: 50vw;
+        }
+        .box1 {
+          animation: loadingAnim2 1400ms $bounce;
+          border-radius: 0 0 $borderRadiusLevel1 $borderRadiusLevel1;
+          height: 25vh;
+          .line1 {
+            bottom: 0;
+            &::after {
+              bottom: unset;
+              transform: translate(-25%, -50%);
+            }
+          }
+        }
+        .box2 {
+          animation: loadingAnim2 1200ms $bounce;
+          border-radius: 0 0 $borderRadiusLevel1 $borderRadiusLevel1;
+          margin-right: $normGap1;
+          height: 30vh;
+          .lines {
+            top: 40%;
+          }
+          &::before {
+            transform: translateY(58%);
+          }
+        }
+      }
+      #rightSide {
+        width: 100%;
+        width: 100%;
+        .boxes {
+          width: 50vw;
+        }
+        .box3 {
+          animation: loadingAnim2 1500ms $bounce;
+          margin-left: $normGap1;
+          height: 30vh;
+        }
+        .box4 {
+          animation: loadingAnim2 1300ms $bounce;
+          height: 25vh;
+        }
+      }
+    }
   }
 }
