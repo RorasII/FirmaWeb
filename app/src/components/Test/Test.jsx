@@ -28,7 +28,7 @@ function Test() {
 
   return (
     <div>
-      <canvas ref={canvasRef} width={1920} height={800} style={{ border: "1px solid black" }}></canvas>
+      <canvas ref={canvasRef} width={800} height={800} style={{ border: "1px solid black" }}></canvas>
     </div>
   );
 }
