@@ -30,8 +30,8 @@ export function drawSomething(canvas, ctx, time) {
       this.id = id;
 
       // Calculating starting position
-      let dx = Math.random() * canvasWidth - canvasWidth / 2;
-      let dy = Math.random() * canvasHeight - canvasHeight / 2;
+      let dx = Math.random() * 200 - 100;
+      let dy = Math.random() * 200 - 100;
 
       this.x = canvasWidth * 0.5 + dx;
       this.y = canvasHeight * 0.5 + dy;
@@ -41,13 +41,12 @@ export function drawSomething(canvas, ctx, time) {
 
       // Calculating starting size and mass
       this.size = Math.floor(Math.random() * 7) + 8;
-      if (Math.floor(Math.random() * 20) == 0) this.size *= 3;
+      if (this.id % 10 == 0) this.size *= 3;
       this.mass = Math.PI * this.size * this.size;
 
       // Calculating starting vector
       let direction = Math.floor(Math.random() * 360);
       let speed = Math.floor(Math.random() * 70) + 10;
-      if (Math.floor(Math.random() * 10) == 0) this.speed *= 3;
 
       let vx = Math.cos(direction) * speed;
       let vy = Math.sin(direction) * speed;
@@ -84,19 +83,16 @@ export function drawSomething(canvas, ctx, time) {
           let dx = this.x - particle.x;
           let dy = this.y - particle.y;
           let distance = Math.sqrt(dx * dx + dy * dy);
-          if (distance + 1 < this.size + particle.size) {
-            this.staticParticleCollision(particle);
+          if (distance <= this.size + particle.size) {
+            this.staticParticleCollision(distance, particle);
             this.dynamicParticleCollision(particle);
           }
         }
       });
     }
 
-    staticParticleCollision(particle) {
+    staticParticleCollision(distance, particle) {
       // Calculatin overlap if particles
-      let dx = this.x - particle.x;
-      let dy = this.y - particle.y;
-      let distance = Math.sqrt(dx * dx + dy * dy);
       let overlap = 0.5 * (distance - this.size - particle.size);
       if (overlap >= 0) console.log(overlap);
 
